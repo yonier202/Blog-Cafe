@@ -3,6 +3,7 @@
     --fuenteParrafos: 'Open Sans', sans-serif;
     
     --promario: #784d3c;
+    --gris: #e1e1e1;
     --blanco: #fff;
     --negro: #000;
 
@@ -34,6 +35,7 @@ a{
 }
 h1, h2, h3, h4{
     font-family: var(--fuenteHeading);
+    line-height: 1,2;
 }
 h1{
     font-size: 4.8rem;
@@ -80,7 +82,9 @@ img{
         margin-top: 15rem;
     }
 }
-
+.barra{
+    padding-top: 4rem;
+}
 @media (min-width: 768px){
     .barra{
         display: flex;
@@ -117,4 +121,69 @@ img{
         grid-template-columns: 2fr 1fr;
         column-gap: 3rem;
     }
+}
+
+.entrada{
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+
+/* ultimo de este tipo */
+.entrada:last-of-type{
+    border:none;
+    margin-bottom: 0;
+}
+
+.boton{
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px){
+    .boton{
+        display: inline-block;
+    }
+}
+
+.boton--primario{
+    background-color: var(--negro);
+}
+.boton--secundario{
+    background-color: var(--promario);
+}
+
+.cursos{
+    list-style: none;
+}
+.widge-curso{
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+.widge-curso:last-of-type{
+    border:none;
+    margin-bottom: 0;
+}
+.widget-curso__label{
+    font-family: var(--fuenteHeading);
+    font-weight: 700;
+}
+
+.widget-curso__info{
+    font-weight: 400;
+}
+.widget-curso__info, .widget-curso__label{
+    font-size: 2rem;
+}
+
+footer{
+    background-color: var(--negro);
+    padding-bottom: 3rem;
+    margin-top: 4rem;
 }
