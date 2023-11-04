@@ -187,3 +187,9 @@ footer{
     padding-bottom: 3rem;
     margin-top: 4rem;
 }
+
+.sobre-nosotros{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
