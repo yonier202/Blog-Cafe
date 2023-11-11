@@ -188,8 +188,22 @@ footer{
     margin-top: 4rem;
 }
 
-.sobre-nosotros{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+@media (min-width: 768px){
+    /* .sobre-nosotros{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    } */
+
+    .sobre-nosotros{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sobre-nosotros__texto{
+        flex-basis: calc(50% - 1rem);
+    }
+    .sobre-nosotros__imagen{
+        flex-basis: calc(50% - 1rem);
+    }
 }
