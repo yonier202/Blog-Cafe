@@ -3,12 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina web de blog de Café">
+
     <title>BlogDeCafé</title>
+    <!-- cargar la siguiente pagina que el usuario iria -->
+    <link rel="prefetch" href="nosotros.html" as="document">
+
+    <!-- PERFORMANCE PARA PRECARGAR ESTOS ARCHIVOS PARA MEJORAR EL RENDIMIENTO -->
+    <!-- preload -->
+
+    <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&family=Staatliches&display=swap" as="font">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header class="header">
@@ -37,7 +51,11 @@
             <h3>Nuestro blog</h3>
             <article class="entrada">
                 <div class="entrada_imagen">
-                    <img src="img/blog1.jpg" alt="imagen blog">
+                    <!-- cargar imagen webp -->
+                    <picture>
+                        <source srcset="img/blog1.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog1.jpg" alt="imagen blog">
+                    </picture>
                 </div>
                 <div class="entrada_contenido">
                     <h4 class="no-margin">Tipos de grano de cafe</h4>
@@ -50,8 +68,11 @@
 
             <article class="entrada">
                 <div class="entrada_imagen">
-                    <img src="img/blog2.jpg" alt="imagen blog">
-                </div>
+                    <!-- cargar imagen webp -->
+                    <picture>
+                        <source srcset="img/blog2.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog2.jpg" alt="imagen blog">
+                    </picture>                </div>
                 <div class="entrada_contenido">
                     <h4 class="no-margin">3 Deliciosas recetas de café</h4>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam itaque magni nemo odit libero facilis,
@@ -62,8 +83,11 @@
             </article>
             <article class="entrada">
                 <div class="entrada_imagen">
-                    <img src="img/blog3.jpg" alt="imagen blog">
-                </div>
+                    <!-- cargar imagen webp -->
+                    <picture>
+                        <source srcset="img/blog3.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog3.jpg" alt="imagen blog">
+                    </picture>                </div>
                 <div class="entrada_contenido">
                     <h4 class="no-margin">Beneficios del café</h4>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam itaque magni nemo odit libero facilis,
@@ -84,7 +108,7 @@
                     <p class="widget-curso__label">Cupo: 
                         <span class="widget-curso__info">20</span>
                     </p>
-                    <a href="entrada.html" class="boton boton--secundario">Más información</a>
+                    <a href="entrada.html" class="boton boton--secundario">Más información sobre nuestros cursos</a>
                 </li>
                 <li class="widge-curso">
                     <h4 class="no-margin">4 recetas de Cafe para principiantes</h4>
@@ -94,7 +118,7 @@
                     <p class="widget-curso__label">Cupo: 
                         <span class="widget-curso__info">10</span>
                     </p>
-                    <a href="entrada.html" class="boton boton--secundario">Más información</a>
+                    <a href="entrada.html" class="boton boton--secundario">Más información sobre nuestros cursos</a>
                 </li>
             </ul>
         </aside>
@@ -115,5 +139,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/modernizr.js"></script>
 </body>
 </html>
